@@ -1,0 +1,20 @@
+﻿@using InvoiceTest.DomainModel;
+@model IEnumerable<ClientDocModel>
+
+@foreach (var client in Model)
+{
+    <div>
+
+       @client.ClientName
+
+        <ul>
+            @foreach (var doc in client.Docs)
+            {
+                <li>
+                    <a href="#" class="linkedit" data-accountid="@doc.AccountId" data-clientid="@doc.ClientId">@doc.DocName</a>
+                </li>
+            }
+        </ul>
+
+    </div>
+}

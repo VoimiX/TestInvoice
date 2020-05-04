@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Главная страница";
+}
+
+<script src="~/Scripts/main.js" type="text/javascript"></script>
+
+
+<div class="search">
+    <b>Счет или наименование</b>&nbsp;<input type="text" name="input" id="text-input" />
+</div>
+
+<div id="result-area">
+
+</div>
+
+<input type="hidden" id="accountid" />
+<input type="hidden" id="clientid" />
+
+<div id="dialog" title="Простой диалог">
+    <p>Введите значение суммы</p>
+    <input id="sum-input" type="text" />  
+    <input type="button" id="btn-save" value="Сохранить" />
+    <input type="button" id="btn-cancel" value="Отмена" />
+</div>
+
