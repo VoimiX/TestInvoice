@@ -23,8 +23,7 @@ namespace InvoiceTest.Web.Controllers
         [HttpPost]
         public ActionResult Search(string input)
         {                   
-            var clientDocs = _docService.GetClientDocs(input);
-                     
+            var clientDocs = _docService.GetClientDocs(input);                     
             if (clientDocs.Count > 0)
             {
                 return PartialView("_Result", clientDocs);

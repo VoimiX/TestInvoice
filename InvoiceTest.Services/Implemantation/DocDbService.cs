@@ -18,8 +18,7 @@ namespace InvoiceTest.Services.Implementation
             using (InvoiceDocEntities context = new InvoiceDocEntities())
             {
                   IQueryable<Account> accounts = context.Accounts.Where(a => a.Number.Contains(searchPattern)
-                    || a.Client.Name.Contains(searchPattern)
-                
+                    || a.Client.Name.Contains(searchPattern)                
                 );                              
 
                 var clientGroups = from a in accounts
@@ -50,9 +49,7 @@ namespace InvoiceTest.Services.Implementation
 
                 return clientDocs;
             }
-        }
-
-        
+        }        
         public IList<string> SaveDocAmount(int accountId, int clientId, decimal amount)
         {
             using (InvoiceDocEntities context = new InvoiceDocEntities())
